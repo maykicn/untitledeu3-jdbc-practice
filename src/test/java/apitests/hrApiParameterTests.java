@@ -26,11 +26,14 @@ public class hrApiParameterTests {
     @Test
     public void test1(){
 
+        Response response = given().accept(ContentType.JSON)
+                .and().queryParam("q", "{\"region_id\":2}")
+                .when().get("/countries");
+        assertEquals(response.statusCode(),200);
+        assertEquals(response.contentType(),"application/json");
+        assertTrue(response.body().asString().contains("United States of America"));
 
-
-
-
-
+        System.out.println("response.body().asString() = " + response.body().asString());
     }
 
 
