@@ -1,10 +1,12 @@
 package Day6_POJO;
 
+import com.google.gson.Gson;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
 import java.util.List;
+import java.util.Map;
 
 import static io.restassured.RestAssured.*;
 import static org.testng.Assert.*;
@@ -57,6 +59,36 @@ public class Pojo_deserialize {
 
 
 
+    }
+
+    @Test
+    public void gson_example() {
+
+
+        Gson gson=new Gson();
+
+        //JSON to Java collection  or Pojo --> De-Serialization
+
+        String myJsonData="{\n" +
+                "    \"id\": 11,\n" +
+                "    \"name\": \"Lionel Pepsi\",\n" +
+                "    \"gender\": \"Female\",\n" +
+                "    \"phone\": 1231232145\n" +
+                "}";
+
+        Map map = gson.fromJson(myJsonData, Map.class);
+        System.out.println("map = " + map);
+
+        Spartan spartan11   =gson.fromJson(myJsonData,Spartan.class);
+        System.out.println("spartan11 = " + spartan11);
+
+
+        //------------SERIALIZATION------------
+        //JAVA Collection or POJO to JSON
+        
+        Spartan spartanEU=new Spartan(200,"Mike","Male",123213133);
+        String jsonSpartanEU = gson.toJson(spartanEU);
+        System.out.println("jsonSpartanEU = " + jsonSpartanEU);
     }
 
 
