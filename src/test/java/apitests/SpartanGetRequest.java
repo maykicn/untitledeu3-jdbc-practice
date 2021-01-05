@@ -17,7 +17,7 @@ public class SpartanGetRequest {
     @Test
     public void test1(){
 
-        Response response=when().get(spartanUrl+"/api/spartans");
+        Response response=when().get(spartanUrl+"/api/spartans/89");
         System.out.println(response.statusCode());
         System.out.println(response.prettyPrint());
 

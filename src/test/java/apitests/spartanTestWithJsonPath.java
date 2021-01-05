@@ -73,6 +73,42 @@ public class spartanTestWithJsonPath {
 
     }
 
+    @Test
+    //kendi denemem
+    public void test1(){
+        Response response = given().accept(ContentType.JSON)
+                .and().pathParam("id", 89)
+                .when().get("/api/spartans/{id}");
+
+        assertEquals(response.statusCode(),200);
+        assertEquals(response.contentType(),"application/json;charset=UTF-8");
+
+
+
+
+        String name=response.path("name");
+
+
+
+
+        //assign response to jsonpath
+        JsonPath jsonPath=response.jsonPath();
+
+        int idJson= jsonPath.getInt("id");
+        String nameJson=jsonPath.getString("name");
+        String gender=jsonPath.getString("gender");
+        long phone=jsonPath.getLong("phone");
+
+        System.out.println("idJson = " + idJson);
+        System.out.println("nameJson = " + nameJson);
+        System.out.println("gender = " + gender);
+        System.out.println("phone = " + phone);
+
+
+
+    }
+
+
 
 
 
