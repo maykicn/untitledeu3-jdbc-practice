@@ -10,7 +10,7 @@ import static io.restassured.RestAssured.baseURI;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 import static org.testng.Assert.*;
-public class SpartanFlow {
+public class SpartanFlowHOMEWORK {
 
     int id;
     @BeforeClass

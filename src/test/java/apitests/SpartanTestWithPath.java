@@ -15,7 +15,7 @@ public class SpartanTestWithPath {
     @BeforeClass
         public void beforeClass(){
 
-            baseURI="http://3.80.189.73:8000";
+            baseURI="http://52.86.179.144:8000";
         }
 
 
@@ -39,7 +39,7 @@ public class SpartanTestWithPath {
                     .when().get("/api/spartans/{id}");
 
             assertEquals(response.statusCode(),200);
-            assertEquals(response.contentType(),"application/json;charset=UTF-8");
+            assertEquals(response.contentType(),"application/json");
 
             //print each key value in the json body/payload
             System.out.println(response.path("id").toString());

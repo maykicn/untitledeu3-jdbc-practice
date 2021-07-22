@@ -16,7 +16,7 @@ import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 import static org.testng.Assert.*;
 
-public class PostRequestDemo {
+public class PostRequestDemoOptionalHOMEWORK {
 
     @BeforeClass
     public void beforeclass(){
@@ -128,10 +128,15 @@ public class PostRequestDemo {
         //use those info to send post request to spartan
 
 
+        //eu3-bookit-project homework  var
+
+
         Spartan spartanEU = new Spartan();
         spartanEU.setName("MikeEU3");
         spartanEU.setGender("Male");
         spartanEU.setPhone(8877445596l);
+
+
 
 
         given().log().all()

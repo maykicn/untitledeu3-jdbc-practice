@@ -15,7 +15,9 @@ public class SpartanTestWithParameters {
     @BeforeClass
     public void beforeClass(){
 
-        baseURI="http://3.80.189.73:8000";
+        baseURI="http://52.86.179.144:8000";
+
+        //http://34.232.65.126:8000/swagger-ui.html#/ bu adres ten sadece dökümana ulaşabilirsin
     }
 
       /*

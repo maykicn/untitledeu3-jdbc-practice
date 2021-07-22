@@ -6,7 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="untitledeu3-jdbc-practice" />
+        <module name="eu3-jdbc-practice" />
       </profile>
     </annotationProcessing>
   </component>
